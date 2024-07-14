@@ -1,0 +1,15 @@
+{% extends "HH_app/layout/base.html" %}
+
+{% block title %}
+Resume Detail
+{% endblock %}
+
+{% block content %}
+  <h1>{{ resume.job_title }}</h1>
+  <p><strong>Name:</strong> {{ resume.first_name }} {{ resume.middle_name }} {{ resume.last_name }}</p>
+  <p><strong>Date of Birth:</strong> {{ resume.birth_date }}</p>
+  <p><strong>Email:</strong> {{ resume.email }}</p>
+  <p><strong>Skills:</strong> {{ resume.skills }}</p>
+  <p><strong>Experience:</strong> {{ resume.experience }}</p>
+  <p><strong>Education:</strong> {{ resume.education }}</p>
+{% endblock %}
