@@ -1,0 +1,14 @@
+{% extends 'user/layout/base.html' %}
+
+{% block title %}
+REGISTRATION
+{% endblock %}
+
+
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button>REGISTRATION</button>
+    </form>
+{% endblock %}>

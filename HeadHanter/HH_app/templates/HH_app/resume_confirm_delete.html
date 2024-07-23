@@ -1,0 +1,11 @@
+{% extends 'HH_app/layout/base.html' %}
+
+{% block content %}
+    <h1>Delete Resume</h1>
+    <p>Are you sure you want to delete "{{ object.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, delete</button>
+        <a href="{% url 'resume_detail' object.pk %}">Cancel</a>
+    </form>
+{% endblock %}

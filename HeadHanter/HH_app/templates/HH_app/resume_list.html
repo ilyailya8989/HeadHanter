@@ -1,0 +1,17 @@
+{% extends "HH_app/layout/base.html" %}
+
+{% block title %}
+Resumes
+{% endblock %}
+
+{% block content %}
+  <h1>Resumes</h1>
+  <ul>
+    {% for resume in resumes %}
+      <li><a href="{% url 'resume_detail' resume.pk %}">{{ resume.job_title }} - {{ resume.first_name }} {{ resume.last_name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% if not resumes %}
+    <p>No resumes found.</p>
+  {% endif %}
+{% endblock %}
